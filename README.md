@@ -17,7 +17,7 @@ Usage
 
 Now back on your local repo of the website, you need to add a remote to the repo you just created.
 ```
-git remote add web ssh://user@domain.com/home/user/myrepos/websitename.git
+git remote add web ssh://user@domain.com/home/username/.git/websitename.git
 ```
 Then type:
 ```

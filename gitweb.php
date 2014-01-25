@@ -22,11 +22,7 @@
 		echo " Choose which website you want to manage with Git...\n\n";
 		for ($i = 0; $i < count($websites); $i++)
 		{
-			// don't list git repos!
-			//if (strpos($websites[$i], '.git') == false)
-			//{
-				echo '     #'.($i+1).' - '.$websites[$i]."\n";	
-			//}
+			echo '     #'.($i+1).' - '.$websites[$i]."\n";	
 		}
 
 		echo "\n Type the number here: ";
@@ -38,10 +34,6 @@
 		}
 	}
 	
-	
-	//echo ' /home/'.$username.'/'.$websites[$choice-1]."\n";
-	//shell_exec("mkdir -p ".$websites[$choice-1].'.git');
-	//shell_exec("cd ".$websites[$choice-1].'.git');
 	$pr =
 		"#!/bin/sh\n".
 		"git --work-tree=/home/$username/".$websites[$choice-1]." --git-dir=/home/$username/.git/".$websites[$choice-1].".git checkout -f\n";
